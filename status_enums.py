@@ -10,6 +10,6 @@ class GameStatus(Enum):
 # Enum class denoting whether and how the game should be replayed - either the game
 # is replayed with the same settings, replayed with new settings, or the game is quit out
 class ReplayStatus(Enum):
-    SAME = 1
-    CHANGE = 2
-    QUIT = 3
+    SAME = "s"
+    CHANGE = "c"
+    QUIT = "q"

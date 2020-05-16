@@ -153,9 +153,9 @@ class Game:
 	# Prompt user for whether they would like to replay the game
 	def prompt_replay(self):
 		while True:
-			replay_val = input("Would you like to [p]lay again with the same settings," +
+			replay_val = input("Would you like to play again with the [s]ame settings," +
 				" [c]hange game settings, or [q]uit?")
-			if replay_val in ("p", "c", "q"):
+			if replay_val in ("s", "c", "q"):
 				break
 			else:
 				print("\nThat input was invalid.")
@@ -165,15 +165,9 @@ class Game:
 
 	# Update replay status, used for determining whether and how to restart the game
 	def update_replay_status(self, user_input):
-		assert(user_input in ("p", "c", "q"))
-		if user_input == "p":
-			self.replay_status = ReplayStatus.SAME
-		elif user_input == "c":
-			self.replay_status = ReplayStatus.CHANGE
-		else:
-			self.replay_status = ReplayStatus.QUIT
-
-		assert(self.replay_status in ReplayStatus)
+		assert(user_input in ("s", "c", "q"))
+		# Grab the particular replay status enum that corresponds with the input character
+		self.replay_status = ReplayStatus._value2member_map_[user_input]
 
 
 if __name__ == "__main__":
