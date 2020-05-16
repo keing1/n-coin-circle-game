@@ -3,4 +3,4 @@ __pycache__
 *.pyc
 
 # Apple display file
-DS_Store
+.DS_Store
