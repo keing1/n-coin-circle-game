@@ -8,7 +8,7 @@ class GameStatus(Enum):
     PLAYERTURN = 3
 
 # Enum class denoting whether and how the game should be replayed - either the game
-# is replayed with different settings, replayed with new settings, or the game is quit out
+# is replayed with the same settings, replayed with new settings, or the game is quit out
 class ReplayStatus(Enum):
     SAME = 1
     CHANGE = 2
